@@ -6,25 +6,33 @@ import { Call } from "../../assets/svg.module";
 const Header: React.FC = () => {
   return (
     <header className={classes.header}>
-      <span className={classes.title}>
-        <p>Сладкий сундук</p>
-      </span>
-      <div className={classes.address}>
-        <Places />
-        <p>
-          г. Санкт Петербург,
-          <br /> ул. Куйбышева 31
-        </p>
-      </div>
-      <div className={classes.contact}>
-        <Call />
-        <div className={classes.wrap}>
-          <span>
-            <p>
-              Телефон: <a href="tel:+78128449549">(812) 844-95-49</a>
-            </p>
+      <div className="container">
+        <div className={classes.header__content}>
+          <span className={classes.title}>
+            <p>Сладкий сундук</p>
           </span>
-          <p>Ежедневно с 9:00 до 20:00</p>
+
+          <div className={classes.wrap}>
+            <div className={classes.address}>
+              <Places />
+              <p>
+                г. Санкт Петербург,
+                <br /> ул. Куйбышева 31
+              </p>
+            </div>
+
+            <div className={classes.contact}>
+              <Call />
+              <div className={classes.contact__info}>
+                <span className={classes.phone}>
+                  <p>
+                    Телефон: <a href="tel:88128449549">8 (812) 844-95-49</a>
+                  </p>
+                </span>
+                <p>Ежедневно с 9:00 до 20:00</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </header>

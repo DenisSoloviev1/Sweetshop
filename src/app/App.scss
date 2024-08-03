@@ -16,9 +16,16 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    .container{
+      width: 1230px;
+      padding: 0 15px;
+    }
   }
 }
-
+::-webkit-scrollbar {
+  width: 0;
+}
 /* Reset and base styles  */
 * {
   padding: 0px;
@@ -72,7 +79,6 @@ img {
 img,
 svg {
   max-width: 100%;
-  height: auto;
 }
 
 address {

@@ -1,8 +1,49 @@
 .header {
-    position: absolute;
-    top: 50px;
+  position: absolute;
+  top: 50px;
   width: 100%;
   display: flex;
+  justify-content: center;
   color: #ffffff;
-  object-fit: cover;
+
+  .header__content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .title {
+      font-size: 21px;
+      font-weight: 500;
+      line-height: 30px;
+    }
+    .wrap {
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+    }
+
+    .address,
+    .contact {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        font-size: 12px;
+        line-height: 18px;
+        align-content: center;
+        flex-wrap: wrap;
+
+      .phone,
+      a {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 30px;
+        color: #ffffff;
+      }
+      a:hover{
+        color: #2e363e;
+        transition: all 0.2s ease-in;
+      }
+    }
+  }
 }

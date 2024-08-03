@@ -4,7 +4,7 @@ import classes from "./Main.module.scss";
 const Main: React.FC =()=>{
     return(
         <main className={classes.main}>
-            <section className={classes.first}>
+            <section className={classes.sectionFirst}>
 
             </section>
         </main>
