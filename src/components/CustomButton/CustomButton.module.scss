@@ -1,0 +1,25 @@
+.button {
+  display: flex;
+  padding: 28px 48px;
+  gap: 10px;
+  border-radius: 8px;
+  background-color: #FED84C;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  transition: all 0.2s ease-in;
+  border: 2px solid #FED84C;
+
+}
+
+.button:hover {
+  background-color: #F5C104;
+}
+.button:active {
+  background-color: inherit;
+  color: #FED84C;
+}
+
+.small {
+  padding: 18px 38px;
+}

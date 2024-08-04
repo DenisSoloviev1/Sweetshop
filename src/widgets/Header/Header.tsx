@@ -23,10 +23,10 @@ const Header: React.FC = () => {
 
             <div className={classes.contact}>
               <Call />
-              <div className={classes.contact__info}>
+              <div>
                 <span className={classes.phone}>
                   <p>
-                    Телефон: <a href="tel:88128449549">8 (812) 844-95-49</a>
+                    <a href="tel:88128449549">8 (812) 844-95-49</a>
                   </p>
                 </span>
                 <p>Ежедневно с 9:00 до 20:00</p>
