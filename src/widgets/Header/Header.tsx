@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./Header.module.scss";
-import { Places } from "../../assets/svg.module";
-import { Call } from "../../assets/svg.module";
+import { Places } from "../../assets/svg/svg.tsx";
+import { Call } from "../../assets/svg/svg.tsx";
 
 const Header: React.FC = () => {
   return (

@@ -3,20 +3,21 @@ import classes from "./Card.module.scss";
 import CustomButton from "../CustomButton/CustomButton";
 
 interface CardProps {
+  id: string;
   image: string;
   name: string;
   description: string;
-  price: number;
+  price: string;
 }
 
-const Card: React.FC<CardProps> = ({ image, name, description, price }) => {
+const Card: React.FC<CardProps> = ({ id, image, name, description, price }) => {
   return (
     <figure className={classes.card}>
-      <img src={image} alt="photo" />
+      <img id={id} src={image} alt="photo" />
 
       <div className={classes.content}>
         <div className={classes.info}>
-          <h2>{name}</h2>
+          <h3>{name}</h3>
           <p>{description}</p>
         </div>
 
