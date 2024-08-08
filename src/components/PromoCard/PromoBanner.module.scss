@@ -1,0 +1,82 @@
+.promoBanner {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  z-index: 3;
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    gap: 24px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    .label {
+      padding: 10px 18px 10px 18px;
+      border-radius: 5px;
+      background-color: #f2f6fa;
+      color: #2e363e;
+      font-size: 11px;
+      line-height: 16.5px;
+      letter-spacing: 0.1em;
+      text-align: left;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      font-size: 48px;
+      font-weight: 500;
+      line-height: 60px;
+      letter-spacing: -1px;
+      white-space: pre-line;
+    }
+
+    p {
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 34px;
+      white-space: pre-line;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+      li {
+        display: flex;
+        align-items: start;
+        font-size: 18px;
+        line-height: 27px;
+        text-align: left;
+      }
+      li::before {
+        content: "";
+        display: block;
+        width: 10px;
+        height: 10px;
+        background-color: #5d6afb;
+        border-radius: 50%;
+        margin: 7px 7px 0 0;
+      }
+    }
+  }
+
+  .textAndButton {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    span {
+      color: #ffffff;
+      white-space: pre-line;
+    }
+  }
+}
+
+.text-black {
+  color: #2e363e !important;
+}

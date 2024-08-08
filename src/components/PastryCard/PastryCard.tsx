@@ -1,6 +1,6 @@
 import React from "react";
-import classes from "./Card.module.scss";
-import CustomButton from "../CustomButton/CustomButton";
+import classes from "./PastryCard.module.scss";
+import CustomButton from "../CustomButton/CustomButton.tsx";
 
 interface CardProps {
   id: string;
@@ -25,7 +25,7 @@ const Card: React.FC<CardProps> = ({ id, image, name, description, price }) => {
           <span className={classes.price}>
             <p>{price} ₽/шт.</p>
           </span>
-          <CustomButton text={"Заказать"} className="small" />
+          <CustomButton text={"Заказать"} className={"small"} />
         </div>
       </div>
     </figure>

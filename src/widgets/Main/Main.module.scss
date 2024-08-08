@@ -6,47 +6,6 @@
     z-index: 2;
   }
 
-  .content {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    flex-wrap: wrap;
-    align-items: flex-start;
-
-    .info {
-      display: flex;
-      flex-direction: column;
-      color: #ffffff;
-      gap: 24px;
-      flex-wrap: wrap;
-      align-items: flex-start;
-
-      h2 {
-        font-size: 48px;
-        font-weight: 700;
-        line-height: 60px;
-        letter-spacing: -1px;
-      }
-
-      h3 {
-        font-size: 24px;
-        font-weight: 400;
-        line-height: 34px;
-      }
-    }
-
-    .textAndButton {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-
-      p {
-        color: #ffffff;
-      }
-    }
-  }
-
   .sectionFirst {
     padding-top: 200px;
     width: 100%;
@@ -62,7 +21,8 @@
   .sectionSecond {
     width: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     color: #2e363e;
 
     h2 {
@@ -87,29 +47,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     background-color: #081130;
 
     .bottom {
       width: 100%;
-      height: auto;
+      height: 40%;
       display: flex;
-      position: relative;
-      align-items: flex-end; /* Выравнивание по нижней части контейнера */
+      align-items: flex-end; 
 
       .phone {
-        position: absolute; /* Устанавливаем абсолютное позиционирование */
-        left: 0;
-        bottom: 0; /* Расположение в левом нижнем углу */
+        position: absolute;
         z-index: 1;
         width: 50%;
       }
 
       .cloud {
-        position: absolute; /* Устанавливаем абсолютное позиционирование */
-        left: 0;
-        bottom: 0; /* Расположение в левом нижнем углу */
-        z-index: 2;
+        position: absolute;
       }
     }
   }
@@ -118,6 +71,53 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+
+    .woman {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      justify-content: end;
+      padding: 10px 0;
+
+      img {
+        height: 100%;
+      }
+    }
+
+    .parallelograms {
+      position: absolute;
+      left: -100px;
+      bottom: 20%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .name {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 29px;
+        text-align: center;
+        transform: skew(-15deg);
+        padding: 15px 24px;
+        border-radius: 8px;
+        background-color: #2e363e;
+        color: #ffffff;
+      }
+
+      .text {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 21.94px;
+        letter-spacing: 1px;
+        padding: 15px 24px;
+        text-align: center;
+        background-color: #f2f6fa;
+        color: #2e363e;
+        text-transform: uppercase;
+        transform: skew(-15deg);
+      }
+    }
   }
 
   .sectionFifth {
