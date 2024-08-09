@@ -19,22 +19,27 @@ const Feedback: React.FC<FeedbackProps> = ({
 }) => {
   return (
     <div className="container">
-      <div className={classes.info}>
-        <img src={quotes} />
+      <div className={classes.feedback}>
+        <div className={classes.info}>
+          <img src={quotes} />
 
-        <h2 className={classes.title}>{`«${title}»`}</h2>
+          <h3 className={classes.title}>{`«${title}»`}</h3>
 
-        <div className={classes.text}>
-          <p>{`«${text}»`}</p>
-          <a href="#">Читать отзыв полностью</a>
+          <div className={classes.text}>
+            <p>{`«${text}»`}</p>
+            <a href="#">Читать отзыв полностью</a>
+          </div>
         </div>
-      </div>
-      <div className={classes.person}>
-        <img src={photo} alt="фото комментатора" />
 
-        <h3>{name}</h3>
+        <div className={classes.person}>
+          <img src={photo} alt="фото комментатора" className={classes.avatar} />
 
-        <span>{city}</span>
+          <div className={classes.bio}>
+            <h3>{name}</h3>
+
+            <span>{city}</span>
+          </div>
+        </div>
       </div>
     </div>
   );

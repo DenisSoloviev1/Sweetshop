@@ -1,8 +1,8 @@
 import React from "react";
-import classes from "./PastryCard.module.scss";
+import classes from "./CupcakeCard.module.scss";
 import CustomButton from "../CustomButton/CustomButton.tsx";
 
-interface CardProps {
+interface CupcakeCardProps {
   id: string;
   image: string;
   name: string;
@@ -10,7 +10,7 @@ interface CardProps {
   price: string;
 }
 
-const Card: React.FC<CardProps> = ({ id, image, name, description, price }) => {
+const CupcakeCard: React.FC<CupcakeCardProps> = ({ id, image, name, description, price }) => {
   return (
     <figure className={classes.card}>
       <img id={id} src={image} alt="photo" />
@@ -32,4 +32,4 @@ const Card: React.FC<CardProps> = ({ id, image, name, description, price }) => {
   );
 };
 
-export default Card;
+export default CupcakeCard;

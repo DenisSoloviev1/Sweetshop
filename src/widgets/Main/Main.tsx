@@ -1,13 +1,15 @@
 import React from "react";
 import classes from "./Main.module.scss";
-import PastryCard from "../../components/PastryCard/PastryCard.tsx";
+import CupcakeCard from "../../components/CupcakeCard/CupcakeCard.tsx";
 import PromoBanner from "../../components/PromoCard/PromoBanner.tsx";
+import Feedback from "../../components/Feedback/Feedback.tsx";
 
 import { arrayCloud } from "../../assets/image/images.tsx";
-import { arrayCard } from "../../assets/image/images.tsx";
-// import { arraySweets } from "../../assets/image/images.tsx";
+import { arrayCupcakeCard } from "../../assets/image/images.tsx";
+import { arrayImgCupcake } from "../../assets/image/images.tsx";
 import phone from "../../assets/image/phone.png";
 import woman from "../../assets/image/woman.png";
+import avatar0 from "../../assets/image/avatar0.jpg";
 
 const Main: React.FC = () => {
   return (
@@ -32,69 +34,69 @@ const Main: React.FC = () => {
         <h2>Для любых событий и дорогих вам людей</h2>
 
         <div className="container containerCenter">
-          <div className={classes.grid}>
-            <PastryCard
-              id={arrayCard[0].id}
-              image={arrayCard[0].image}
-              name={arrayCard[0].name}
-              description={arrayCard[0].description}
-              price={arrayCard[0].price}
+          <div className={classes.gridCupcakeCard}>
+            <CupcakeCard
+              id={arrayCupcakeCard[0].id}
+              image={arrayCupcakeCard[0].image}
+              name={arrayCupcakeCard[0].name}
+              description={arrayCupcakeCard[0].description}
+              price={arrayCupcakeCard[0].price}
             />
-            <PastryCard
-              id={arrayCard[1].id}
-              image={arrayCard[1].image}
-              name={arrayCard[1].name}
-              description={arrayCard[1].description}
-              price={arrayCard[1].price}
+            <CupcakeCard
+              id={arrayCupcakeCard[1].id}
+              image={arrayCupcakeCard[1].image}
+              name={arrayCupcakeCard[1].name}
+              description={arrayCupcakeCard[1].description}
+              price={arrayCupcakeCard[1].price}
             />
-            <PastryCard
-              id={arrayCard[2].id}
-              image={arrayCard[2].image}
-              name={arrayCard[2].name}
-              description={arrayCard[2].description}
-              price={arrayCard[2].price}
+            <CupcakeCard
+              id={arrayCupcakeCard[2].id}
+              image={arrayCupcakeCard[2].image}
+              name={arrayCupcakeCard[2].name}
+              description={arrayCupcakeCard[2].description}
+              price={arrayCupcakeCard[2].price}
             />
-            <PastryCard
-              id={arrayCard[3].id}
-              image={arrayCard[3].image}
-              name={arrayCard[3].name}
-              description={arrayCard[3].description}
-              price={arrayCard[3].price}
+            <CupcakeCard
+              id={arrayCupcakeCard[3].id}
+              image={arrayCupcakeCard[3].image}
+              name={arrayCupcakeCard[3].name}
+              description={arrayCupcakeCard[3].description}
+              price={arrayCupcakeCard[3].price}
             />
-            <PastryCard
-              id={arrayCard[4].id}
-              image={arrayCard[4].image}
-              name={arrayCard[4].name}
-              description={arrayCard[4].description}
-              price={arrayCard[4].price}
+            <CupcakeCard
+              id={arrayCupcakeCard[4].id}
+              image={arrayCupcakeCard[4].image}
+              name={arrayCupcakeCard[4].name}
+              description={arrayCupcakeCard[4].description}
+              price={arrayCupcakeCard[4].price}
             />
-            <PastryCard
-              id={arrayCard[5].id}
-              image={arrayCard[5].image}
-              name={arrayCard[5].name}
-              description={arrayCard[5].description}
-              price={arrayCard[5].price}
+            <CupcakeCard
+              id={arrayCupcakeCard[5].id}
+              image={arrayCupcakeCard[5].image}
+              name={arrayCupcakeCard[5].name}
+              description={arrayCupcakeCard[5].description}
+              price={arrayCupcakeCard[5].price}
             />
-            <PastryCard
-              id={arrayCard[6].id}
-              image={arrayCard[6].image}
-              name={arrayCard[6].name}
-              description={arrayCard[6].description}
-              price={arrayCard[6].price}
+            <CupcakeCard
+              id={arrayCupcakeCard[6].id}
+              image={arrayCupcakeCard[6].image}
+              name={arrayCupcakeCard[6].name}
+              description={arrayCupcakeCard[6].description}
+              price={arrayCupcakeCard[6].price}
             />
-            <PastryCard
-              id={arrayCard[7].id}
-              image={arrayCard[7].image}
-              name={arrayCard[7].name}
-              description={arrayCard[7].description}
-              price={arrayCard[7].price}
+            <CupcakeCard
+              id={arrayCupcakeCard[7].id}
+              image={arrayCupcakeCard[7].image}
+              name={arrayCupcakeCard[7].name}
+              description={arrayCupcakeCard[7].description}
+              price={arrayCupcakeCard[7].price}
             />
-            <PastryCard
-              id={arrayCard[8].id}
-              image={arrayCard[8].image}
-              name={arrayCard[8].name}
-              description={arrayCard[8].description}
-              price={arrayCard[8].price}
+            <CupcakeCard
+              id={arrayCupcakeCard[8].id}
+              image={arrayCupcakeCard[8].image}
+              name={arrayCupcakeCard[8].name}
+              description={arrayCupcakeCard[8].description}
+              price={arrayCupcakeCard[8].price}
             />
           </div>
         </div>
@@ -159,16 +161,36 @@ const Main: React.FC = () => {
       <section className={classes.sectionFifth}>
         <img src={arrayCloud[2].image} className={classes.cloud} />
 
-        <div className="container">
-          <h1>5 отзывы</h1>
-        </div>
+        <h2>Почитайте отзывы довольных клиентов</h2>
+
+        <Feedback
+          title={"Результат дико порадовал, друзья были в восторге"}
+          text={
+            "Заказала капкейки, как подарок на новый год. Делать заказ было легко и приятно, ну а результат дико порадовал, друзья были в восторге. И оформление, и на вкус капкейки были просто замечательные. Обязательно буду заказывать еще)) Уже строю планы, чтобы попробовать все начинки. Они восхитительны!) Даже кушать было жалко, такая красота!)"
+          }
+          photo={avatar0}
+          name={"Ирина Ларионова"}
+          city={"Санкт-Петербург"}
+        />
 
         <img src={arrayCloud[3].image} className={classes.cloud} />
       </section>
-
+      {/* доделать карусель */}
       <section className={classes.sectionSixth}>
-        <div className="container">
-          <h1>6</h1>
+        <h2>Сделали более 3.000 заказов за 2 года</h2>
+
+        <h3>Посмотрите фото реальных заказов из нашего instagram</h3>
+
+        <div className={classes.gridImgCupcake}>
+          <img src={arrayImgCupcake[0].image} alt={`image: ${arrayImgCupcake[0].id}`} />
+          <img src={arrayImgCupcake[1].image} alt={`image: ${arrayImgCupcake[1].id}`} />
+          <img src={arrayImgCupcake[2].image} alt={`image: ${arrayImgCupcake[2].id}`} />
+          <img src={arrayImgCupcake[3].image} alt={`image: ${arrayImgCupcake[3].id}`} />
+          <img src={arrayImgCupcake[4].image} alt={`image: ${arrayImgCupcake[4].id}`} />
+          <img src={arrayImgCupcake[5].image} alt={`image: ${arrayImgCupcake[5].id}`} />
+          <img src={arrayImgCupcake[6].image} alt={`image: ${arrayImgCupcake[6].id}`} />
+          <img src={arrayImgCupcake[7].image} alt={`image: ${arrayImgCupcake[7].id}`} />
+          <img src={arrayImgCupcake[8].image} alt={`image: ${arrayImgCupcake[8].id}`} />
         </div>
       </section>
     </main>

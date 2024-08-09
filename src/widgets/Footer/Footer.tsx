@@ -1,12 +1,14 @@
 import React from "react";
-import "./Footer.module.scss";
+import classes from "./Footer.module.scss";
 
-const Footer: React.FC =()=>{
-    return(
-        <footer>
+import { arrayCloud } from "../../assets/image/images.tsx";
 
-        </footer>
-    );
-}
+const Footer: React.FC = () => {
+  return (
+    <footer className={classes.footer}>
+      <img src={arrayCloud[4].image} className={classes.cloud} />
+    </footer>
+  );
+};
 
 export default Footer;
