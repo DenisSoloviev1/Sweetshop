@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import classes from "./Feedback.module.scss";
 import quotes from "../../assets/image/quotes.png";
 
@@ -8,6 +8,7 @@ interface FeedbackProps {
   photo: string;
   name: string;
   city: string;
+  maxLength?: number;
 }
 
 const Feedback: React.FC<FeedbackProps> = ({
@@ -16,18 +17,34 @@ const Feedback: React.FC<FeedbackProps> = ({
   photo,
   name,
   city,
+  maxLength = 350,
 }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const toggleExpand = () => {
+    setIsExpanded(!isExpanded);
+  };
+
+  const displayedText =
+    isExpanded || text.length <= maxLength
+      ? text
+      : text.slice(0, maxLength) + "...";
+
   return (
     <div className="container">
       <div className={classes.feedback}>
         <div className={classes.info}>
-          <img src={quotes} />
+          <img src={quotes} alt="quotes" />
 
           <h3 className={classes.title}>{`«${title}»`}</h3>
 
           <div className={classes.text}>
-            <p>{`«${text}»`}</p>
-            <a href="#">Читать отзыв полностью</a>
+            <p>{`«${displayedText}»`}</p>
+            {text.length > maxLength && (
+              <a onClick={toggleExpand}>
+                {isExpanded ? "Скрыть" : "Читать отзыв полностью"}
+              </a>
+            )}
           </div>
         </div>
 
@@ -36,7 +53,6 @@ const Feedback: React.FC<FeedbackProps> = ({
 
           <div className={classes.bio}>
             <h3>{name}</h3>
-
             <span>{city}</span>
           </div>
         </div>

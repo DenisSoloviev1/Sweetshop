@@ -1,12 +1,16 @@
 import React from "react";
 import classes from "./Footer.module.scss";
 
-import { arrayCloud } from "../../assets/image/images.tsx";
-
 const Footer: React.FC = () => {
   return (
     <footer className={classes.footer}>
-      <img src={arrayCloud[4].image} className={classes.cloud} />
+      <div className={classes.links}>
+        <a href="" target="_blanck">Согласие на обработку данных</a>
+        <a href="" target="_blanck">Служба поддержки</a>
+        <a href="" target="_blanck">Политика конфиденциальности</a>
+      </div>
+      
+      <p>© nazvaniesaita.ru, 2054 | Название компании или ИП ОГРН 0000000000000</p>
     </footer>
   );
 };

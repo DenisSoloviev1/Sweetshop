@@ -9,7 +9,7 @@
   color: #ffffff;
   border-bottom: 1px solid rgba(126, 134, 142, 10%);
 
-  .header__content {
+  .content {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -46,11 +46,15 @@
         font-weight: 700;
         line-height: 30px;
         color: #ffffff;
+        transition: all 0.2s ease-in;
       }
       a:hover {
         color: #2e363e;
-        transition: all 0.2s ease-in;
       }
     }
+  }
+
+  svg{
+    fill: #FFFFFF;
   }
 }

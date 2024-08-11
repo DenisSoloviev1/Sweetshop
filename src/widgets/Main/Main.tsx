@@ -3,6 +3,7 @@ import classes from "./Main.module.scss";
 import CupcakeCard from "../../components/CupcakeCard/CupcakeCard.tsx";
 import PromoBanner from "../../components/PromoCard/PromoBanner.tsx";
 import Feedback from "../../components/Feedback/Feedback.tsx";
+import CustomButton from "../../components/CustomButton/CustomButton.tsx";
 
 import { arrayCloud } from "../../assets/image/images.tsx";
 import { arrayCupcakeCard } from "../../assets/image/images.tsx";
@@ -10,8 +11,16 @@ import { arrayImgCupcake } from "../../assets/image/images.tsx";
 import phone from "../../assets/image/phone.png";
 import woman from "../../assets/image/woman.png";
 import avatar0 from "../../assets/image/avatar0.jpg";
+import { Call } from "../../assets/svg/svg.tsx";
 
 const Main: React.FC = () => {
+  const inputClick = () => {
+    const inputElement = document.getElementById("input");
+    if (inputElement) {
+      inputElement.focus();
+    }
+  };
+
   return (
     <main className={classes.main}>
       <section className={classes.sectionFirst}>
@@ -26,6 +35,7 @@ const Main: React.FC = () => {
             }
             buttonText={"Перейти в каталог"}
             subText={"9 различных \n видов на выбор"}
+            targetId={"catalog"}
           />
         </div>
       </section>
@@ -34,7 +44,7 @@ const Main: React.FC = () => {
         <h2>Для любых событий и дорогих вам людей</h2>
 
         <div className="container containerCenter">
-          <div className={classes.gridCupcakeCard}>
+          <div className={classes.gridCupcakeCard} id="catalog">
             <CupcakeCard
               id={arrayCupcakeCard[0].id}
               image={arrayCupcakeCard[0].image}
@@ -166,7 +176,7 @@ const Main: React.FC = () => {
         <Feedback
           title={"Результат дико порадовал, друзья были в восторге"}
           text={
-            "Заказала капкейки, как подарок на новый год. Делать заказ было легко и приятно, ну а результат дико порадовал, друзья были в восторге. И оформление, и на вкус капкейки были просто замечательные. Обязательно буду заказывать еще)) Уже строю планы, чтобы попробовать все начинки. Они восхитительны!) Даже кушать было жалко, такая красота!)"
+            "Заказала капкейки, как подарок на новый год. Делать заказ было легко и приятно, ну а результат дико порадовал, друзья были в восторге. И оформление, и на вкус капкейки были просто замечательные. Обязательно буду заказывать еще)) Уже строю планы, чтобы попробовать все начинки. Они восхитительны!) Даже кушать было жалко, такая красота!) Они превзошли все ожидания и стали настоящим украшением праздника. Огромное спасибо за такие невероятные эмоции!"
           }
           photo={avatar0}
           name={"Ирина Ларионова"}
@@ -182,15 +192,86 @@ const Main: React.FC = () => {
         <h3>Посмотрите фото реальных заказов из нашего instagram</h3>
 
         <div className={classes.gridImgCupcake}>
-          <img src={arrayImgCupcake[0].image} alt={`image: ${arrayImgCupcake[0].id}`} />
-          <img src={arrayImgCupcake[1].image} alt={`image: ${arrayImgCupcake[1].id}`} />
-          <img src={arrayImgCupcake[2].image} alt={`image: ${arrayImgCupcake[2].id}`} />
-          <img src={arrayImgCupcake[3].image} alt={`image: ${arrayImgCupcake[3].id}`} />
-          <img src={arrayImgCupcake[4].image} alt={`image: ${arrayImgCupcake[4].id}`} />
-          <img src={arrayImgCupcake[5].image} alt={`image: ${arrayImgCupcake[5].id}`} />
-          <img src={arrayImgCupcake[6].image} alt={`image: ${arrayImgCupcake[6].id}`} />
-          <img src={arrayImgCupcake[7].image} alt={`image: ${arrayImgCupcake[7].id}`} />
-          <img src={arrayImgCupcake[8].image} alt={`image: ${arrayImgCupcake[8].id}`} />
+          <img
+            src={arrayImgCupcake[0].image}
+            alt={`image: ${arrayImgCupcake[0].id}`}
+          />
+          <img
+            src={arrayImgCupcake[1].image}
+            alt={`image: ${arrayImgCupcake[1].id}`}
+          />
+          <img
+            src={arrayImgCupcake[2].image}
+            alt={`image: ${arrayImgCupcake[2].id}`}
+          />
+          <img
+            src={arrayImgCupcake[3].image}
+            alt={`image: ${arrayImgCupcake[3].id}`}
+          />
+          <img
+            src={arrayImgCupcake[4].image}
+            alt={`image: ${arrayImgCupcake[4].id}`}
+          />
+          <img
+            src={arrayImgCupcake[5].image}
+            alt={`image: ${arrayImgCupcake[5].id}`}
+          />
+          <img
+            src={arrayImgCupcake[6].image}
+            alt={`image: ${arrayImgCupcake[6].id}`}
+          />
+          <img
+            src={arrayImgCupcake[7].image}
+            alt={`image: ${arrayImgCupcake[7].id}`}
+          />
+          <img
+            src={arrayImgCupcake[8].image}
+            alt={`image: ${arrayImgCupcake[8].id}`}
+          />
+        </div>
+      </section>
+
+      <section className={classes.sectionSeventh}>
+        <img src={arrayCloud[4].image} className={classes.cloud} />
+
+        <div className="container containerCenter">
+          <form action="" className={classes.form}>
+            <header className={classes.header}>
+              <h2>Чтобы сделать заказ, укажите ваш телефон</h2>
+
+              <p>
+                Мы перезвоним в течении 15 минут, чтобы уточнить ваши пожелания
+              </p>
+            </header>
+
+            <div className={classes.actions}>
+              <div className={classes.inputAndButton}>
+                <div className={classes.inputContainet} onClick={inputClick}>
+                  <Call />
+
+                  <input
+                    type="tel"
+                    placeholder="Номер телефона"
+                    maxLength={12}
+                    id="input"
+                  />
+                </div>
+
+                <CustomButton text={"Сделать заказ"} className={"medium"} />
+              </div>
+
+              <div className={classes.checkbox}>
+                <input type="checkbox" id="consent" />
+
+                <label htmlFor="consent">
+                  Нажимая на кнопку, вы соглашаетесь с &thinsp;
+                  <a href="https://your-link.com" target="_blank">
+                    условиями обработки персональных данных
+                  </a>
+                </label>
+              </div>
+            </div>
+          </form>
         </div>
       </section>
     </main>

@@ -1,25 +1,32 @@
 .button {
   display: flex;
-  padding: 28px 48px;
   gap: 10px;
   border-radius: 8px;
-  background-color: #FED84C;
+  background-color: #fed84c;
   font-size: 18px;
   font-weight: 500;
   line-height: 27px;
   transition: all 0.2s ease-in;
-  border: 2px solid #FED84C;
-
+  border: 2px solid #fed84c;
 }
 
 .button:hover {
-  background-color: #F5C104;
+  background-color: #f5c104;
 }
 .button:active {
   background-color: inherit;
-  color: #FED84C;
+  color: #fed84c;
 }
 
 .small {
   padding: 18px 38px;
 }
+
+.medium {
+  padding: 28px 38px;
+}
+
+.big{
+  padding: 28px 48px;
+}
+//padding на 2px меньше из-за border

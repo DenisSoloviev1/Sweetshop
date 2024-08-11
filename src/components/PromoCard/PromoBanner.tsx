@@ -11,6 +11,7 @@ interface PromoBannerProps {
   buttonText: string;
   subText?: string;
   className?: string;
+  targetId?: string;
 }
 
 const PromoBanner: React.FC<PromoBannerProps> = ({
@@ -21,6 +22,7 @@ const PromoBanner: React.FC<PromoBannerProps> = ({
   buttonText,
   subText,
   className,
+  targetId
 }) => {
   return (
     <div className={classes.promoBanner}>
@@ -34,7 +36,7 @@ const PromoBanner: React.FC<PromoBannerProps> = ({
       </header>
 
       <div className={classes.textAndButton}>
-        <CustomButton text={buttonText} />
+        <CustomButton text={buttonText} className={"big"} targetId={targetId}/>
         <span>{subText}</span>
       </div>
     </div>
