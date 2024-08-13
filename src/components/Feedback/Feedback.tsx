@@ -19,7 +19,7 @@ const Feedback: React.FC<FeedbackProps> = ({
   city,
   maxLength = 350,
 }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState<boolean>(false);
 
   const toggleExpand = () => {
     setIsExpanded(!isExpanded);
@@ -31,7 +31,6 @@ const Feedback: React.FC<FeedbackProps> = ({
       : text.slice(0, maxLength) + "...";
 
   return (
-    <div className="container">
       <div className={classes.feedback}>
         <div className={classes.info}>
           <img src={quotes} alt="quotes" />
@@ -57,7 +56,6 @@ const Feedback: React.FC<FeedbackProps> = ({
           </div>
         </div>
       </div>
-    </div>
   );
 };
 

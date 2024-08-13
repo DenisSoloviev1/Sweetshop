@@ -1,19 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import classes from "./Main.module.scss";
 import CupcakeCard from "../../components/CupcakeCard/CupcakeCard.tsx";
-import PromoBanner from "../../components/PromoCard/PromoBanner.tsx";
-import Feedback from "../../components/Feedback/Feedback.tsx";
+import PromoBanner from "../../components/PromoBanner/PromoBanner.tsx";
+import FeedbackCarousel from "../FeedbackCarousel/FeedbackCarousel.tsx";
 import CustomButton from "../../components/CustomButton/CustomButton.tsx";
-
-import { arrayCloud } from "../../assets/image/images.tsx";
-import { arrayCupcakeCard } from "../../assets/image/images.tsx";
-import { arrayImgCupcake } from "../../assets/image/images.tsx";
+import ModalWindow from "../../components/ModalWindow/ModalWindow.tsx";
+//import img
+import { arrayCloud } from "../../assets/data.tsx";
+import { arrayCupcakeCard } from "../../assets/data.tsx";
+import { arrayImgCupcake } from "../../assets/data.tsx";
+import { arrayFeedback } from "../../assets/data.tsx";
 import phone from "../../assets/image/phone.png";
 import woman from "../../assets/image/woman.png";
-import avatar0 from "../../assets/image/avatar0.jpg";
 import { Call } from "../../assets/svg/svg.tsx";
 
 const Main: React.FC = () => {
+  const [showModal, setShowModal] = useState<boolean>(false);
+  const handleClick = () => {
+    setShowModal(!showModal);
+  };
+
   const inputClick = () => {
     const inputElement = document.getElementById("input");
     if (inputElement) {
@@ -51,6 +57,7 @@ const Main: React.FC = () => {
               name={arrayCupcakeCard[0].name}
               description={arrayCupcakeCard[0].description}
               price={arrayCupcakeCard[0].price}
+              onClick={handleClick}
             />
             <CupcakeCard
               id={arrayCupcakeCard[1].id}
@@ -58,6 +65,7 @@ const Main: React.FC = () => {
               name={arrayCupcakeCard[1].name}
               description={arrayCupcakeCard[1].description}
               price={arrayCupcakeCard[1].price}
+              onClick={handleClick}
             />
             <CupcakeCard
               id={arrayCupcakeCard[2].id}
@@ -65,6 +73,7 @@ const Main: React.FC = () => {
               name={arrayCupcakeCard[2].name}
               description={arrayCupcakeCard[2].description}
               price={arrayCupcakeCard[2].price}
+              onClick={handleClick}
             />
             <CupcakeCard
               id={arrayCupcakeCard[3].id}
@@ -72,6 +81,7 @@ const Main: React.FC = () => {
               name={arrayCupcakeCard[3].name}
               description={arrayCupcakeCard[3].description}
               price={arrayCupcakeCard[3].price}
+              onClick={handleClick}
             />
             <CupcakeCard
               id={arrayCupcakeCard[4].id}
@@ -79,6 +89,7 @@ const Main: React.FC = () => {
               name={arrayCupcakeCard[4].name}
               description={arrayCupcakeCard[4].description}
               price={arrayCupcakeCard[4].price}
+              onClick={handleClick}
             />
             <CupcakeCard
               id={arrayCupcakeCard[5].id}
@@ -86,6 +97,7 @@ const Main: React.FC = () => {
               name={arrayCupcakeCard[5].name}
               description={arrayCupcakeCard[5].description}
               price={arrayCupcakeCard[5].price}
+              onClick={handleClick}
             />
             <CupcakeCard
               id={arrayCupcakeCard[6].id}
@@ -93,6 +105,7 @@ const Main: React.FC = () => {
               name={arrayCupcakeCard[6].name}
               description={arrayCupcakeCard[6].description}
               price={arrayCupcakeCard[6].price}
+              onClick={handleClick}
             />
             <CupcakeCard
               id={arrayCupcakeCard[7].id}
@@ -100,6 +113,7 @@ const Main: React.FC = () => {
               name={arrayCupcakeCard[7].name}
               description={arrayCupcakeCard[7].description}
               price={arrayCupcakeCard[7].price}
+              onClick={handleClick}
             />
             <CupcakeCard
               id={arrayCupcakeCard[8].id}
@@ -107,6 +121,7 @@ const Main: React.FC = () => {
               name={arrayCupcakeCard[8].name}
               description={arrayCupcakeCard[8].description}
               price={arrayCupcakeCard[8].price}
+              onClick={handleClick}
             />
           </div>
         </div>
@@ -123,6 +138,7 @@ const Main: React.FC = () => {
               "Загрузите фотографию или эскиз капкейков \n и мы рассчитаем стоимость за 30 минут"
             }
             buttonText={"Загрузить фотографию"}
+            onClick={handleClick}
           />
         </div>
 
@@ -155,6 +171,7 @@ const Main: React.FC = () => {
             }
             buttonText={"Задать вопрос Юлии"}
             className={"text-black"}
+            onClick={handleClick}
           />
 
           <div className={classes.woman}>
@@ -173,23 +190,22 @@ const Main: React.FC = () => {
 
         <h2>Почитайте отзывы довольных клиентов</h2>
 
-        <Feedback
-          title={"Результат дико порадовал, друзья были в восторге"}
-          text={
-            "Заказала капкейки, как подарок на новый год. Делать заказ было легко и приятно, ну а результат дико порадовал, друзья были в восторге. И оформление, и на вкус капкейки были просто замечательные. Обязательно буду заказывать еще)) Уже строю планы, чтобы попробовать все начинки. Они восхитительны!) Даже кушать было жалко, такая красота!) Они превзошли все ожидания и стали настоящим украшением праздника. Огромное спасибо за такие невероятные эмоции!"
-          }
-          photo={avatar0}
-          name={"Ирина Ларионова"}
-          city={"Санкт-Петербург"}
-        />
+        <div className="container">
+          <FeedbackCarousel arrayFeedback={arrayFeedback} />
+        </div>
 
         <img src={arrayCloud[3].image} className={classes.cloud} />
       </section>
-      {/* доделать карусель */}
+
       <section className={classes.sectionSixth}>
         <h2>Сделали более 3.000 заказов за 2 года</h2>
 
-        <h3>Посмотрите фото реальных заказов из нашего instagram</h3>
+        <h3>
+          Посмотрите фото реальных заказов из нашего &thinsp;
+          <a href="https://www.instagram.com/sweet_chest" target="_blank">
+            instagram
+          </a>
+        </h3>
 
         <div className={classes.gridImgCupcake}>
           <img
@@ -252,7 +268,7 @@ const Main: React.FC = () => {
                   <input
                     type="tel"
                     placeholder="Номер телефона"
-                    maxLength={12}
+                    maxLength={11}
                     id="input"
                   />
                 </div>
@@ -274,6 +290,8 @@ const Main: React.FC = () => {
           </form>
         </div>
       </section>
+
+      <ModalWindow show={showModal} handleClose={handleClick} />
     </main>
   );
 };

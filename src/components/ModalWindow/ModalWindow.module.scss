@@ -1,0 +1,104 @@
+.modalWindow {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #6b7280bf;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+
+  .content {
+    position: relative;
+    min-height: 312px;
+    width: 40%;
+    height: 80%;
+    background-color: #ffffff;
+    box-shadow: 0px 10px 10px -5px #0000000a;
+    box-shadow: 0px 20px 25px -5px #0000001a;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+    gap: 24px;
+
+    
+    h2 {
+      font-size: 40px;
+    }
+
+    .wrapper {
+      width: 100%;
+      height: 70%;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .messenger {
+      width: 50%;
+      height: 70%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 10px;
+      border: 2px solid #f2f6fa;
+      box-shadow: 2px 8px 16px 0px #c2c6d00f;
+      gap: 12px;
+      padding: 24px;
+
+      h3 {
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 43px;
+        text-align: left;
+      }
+    }
+    .messenger:hover {
+      cursor: pointer;
+      transform: scale(1.02);
+      transition: all 0.2s ease-in;
+    }
+
+    button {
+      position: absolute;
+      bottom: 24px;
+    }
+  }
+}
+
+.modalWindow.show {
+  display: flex;
+}
+
+// @media screen and (min-width: 426px) {
+//   .modalWindow {
+//     .content {
+//       height: 70%;
+//       padding: 24px;
+//       gap: 24px;
+//     }
+//   }
+// }
+
+// @media screen and (min-width: 769px) {
+//   .modalWindow {
+//     .content {
+//       width: 50%;
+//       height: 90%;
+//     }
+//   }
+// }
+
+// @media screen and (min-width: 2000px) {
+//   .modalWindow {
+//     .content {
+//       padding: 36px;
+//       gap: 24px;
+//       border-radius: 16px;
+//       font-size: 32px;
+//     }
+//   }
+// }

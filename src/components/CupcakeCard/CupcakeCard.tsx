@@ -8,9 +8,10 @@ interface CupcakeCardProps {
   name: string;
   description: string;
   price: string;
+  onClick: () => void;
 }
 
-const CupcakeCard: React.FC<CupcakeCardProps> = ({ id, image, name, description, price }) => {
+const CupcakeCard: React.FC<CupcakeCardProps> = ({ id, image, name, description, price, onClick }) => {
   return (
     <figure className={classes.card}>
       <img id={id} src={image} alt="photo" />
@@ -25,7 +26,7 @@ const CupcakeCard: React.FC<CupcakeCardProps> = ({ id, image, name, description,
           <span className={classes.price}>
             <p>{price} ₽/шт.</p>
           </span>
-          <CustomButton text={"Заказать"} className={"small"} />
+          <CustomButton text={"Заказать"} className={"small"} onClick={onClick}/>
         </div>
       </div>
     </figure>
