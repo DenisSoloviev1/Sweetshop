@@ -26,7 +26,16 @@
   padding: 28px 38px;
 }
 
-.big{
+.big {
   padding: 28px 48px;
 }
 //padding на 2px меньше из-за border
+
+@media screen and (max-width: 426px) {
+  .big {
+    padding: 18px 28px;
+  }
+  .medium {
+    padding: 18px 28px;
+  }
+}

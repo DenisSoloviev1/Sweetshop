@@ -11,6 +11,7 @@
     font-weight: 500;
     line-height: 60px;
     letter-spacing: -1px;
+    white-space: pre-line;
   }
 
   .sectionFirst {
@@ -18,11 +19,16 @@
     width: 100%;
     height: 1295px;
     display: flex;
-    justify-content: center;
-    background-image: url("../../assets/image/bg.jpg");
+    flex-direction: column;
+    align-items: center;
+    background-image: url("../../assets/image/bgCupcake.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    img {
+      display: none;
+    }
   }
 
   .sectionSecond {
@@ -31,39 +37,26 @@
     flex-direction: column;
     align-items: center;
     color: #2e363e;
+    gap: 50px;
 
     .gridCupcakeCard {
+      width: 100%;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
-      padding-top: 50px;
     }
   }
 
   .sectionThird {
     width: 100%;
-    height: 1000px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #081130;
+    background-image: url("../../assets/image/bgPhone.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
-    .bottom {
-      width: 100%;
-      height: 40%;
-      display: flex;
-      align-items: flex-end;
-
-      .phone {
-        position: absolute;
-        z-index: 1;
-        width: 50%;
-      }
-
-      .cloud {
-        position: absolute;
-      }
-    }
   }
 
   .sectionFourth {
@@ -74,14 +67,10 @@
 
     .woman {
       position: relative;
-      height: 100vh;
       display: flex;
       justify-content: end;
+      align-items: center;
       padding: 10px 0;
-
-      img {
-        height: 100%;
-      }
     }
 
     .parallelograms {
@@ -110,6 +99,7 @@
         line-height: 21.94px;
         letter-spacing: 1px;
         padding: 15px 24px;
+        border-radius: 8px;
         text-align: center;
         background-color: #f2f6fa;
         color: #2e363e;
@@ -137,6 +127,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 
     h3 {
       font-size: 24px;
@@ -162,6 +153,7 @@
     color: #2e363e;
 
     .form {
+      width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -212,13 +204,14 @@
             font-size: 15px;
             line-height: 24px;
             text-align: left;
+            border-radius: 8px;
             cursor: text;
 
             svg {
-              fill: #929AA2;
+              fill: #929aa2;
             }
 
-            input{
+            input {
               width: 100%;
             }
           }
@@ -235,10 +228,183 @@
           padding: 1px 0;
           font-size: 11px;
           line-height: 14px;
-          color: #7E868E;
+          color: #7e868e;
 
-          a{
-            border-bottom: 1px solid #7E868E;
+          a {
+            border-bottom: 1px solid #7e868e;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .main {
+    h2 {
+      font-size: 32px;
+      line-height: normal;
+      text-align: center;
+    }
+
+    .sectionFirst {
+      padding-top: 150px;
+      height: auto;
+      background-image: none;
+      background-color: #081130;
+
+      img {
+        display: inline;
+      }
+    }
+
+    .sectionSecond {
+      padding: 50px 0;
+      gap: 25px;
+
+      .gridCupcakeCard {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    .sectionThird {
+      background-image: none;
+      background-color: #081130;
+    }
+
+    .sectionFourth {
+      padding: 50px 0;
+
+      .woman {
+        flex-direction: column;
+        margin-bottom: 40px;
+      }
+
+      .parallelograms {
+        left: 0;
+        bottom: 20px;
+
+        .name {
+          font-size: 16px;
+          line-height: normal;
+          padding: 7px 12px;
+          border-radius: 4px;
+        }
+
+        .text {
+          font-size: 14px;
+          line-height: normal;
+          padding: 7px 12px;
+          border-radius: 4px;
+        }
+      }
+    }
+
+    .sectionSixth {
+      padding: 25px 0;
+
+      h3 {
+        line-height: normal;
+        margin: 0;
+      }
+
+      .gridImgCupcake {
+        grid-template-columns: repeat(2, 1fr);
+        padding-top: 25px;
+      }
+    }
+
+    .sectionSeventh {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #081130;
+      color: #2e363e;
+  
+      .form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #ffffff;
+        padding: 10px 20px;
+        gap: 18px;
+        border-radius: 8px;
+  
+        .header {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          gap: 6px;
+  
+          h2 {
+            font-size: 32px;
+            font-weight: 700;
+            line-height: normal;
+          }
+  
+          p {
+            font-size: 21px;
+            line-height: 30px;
+            letter-spacing: -0.2px;
+          }
+        }
+  
+        .actions {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 24px;
+  
+          .inputAndButton {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+  
+            .inputContainet {
+              width: 100%;
+              height: 66px;
+              display: flex;
+              align-items: center;
+              gap: 8px;
+              padding: 0 41px;
+              background-color: #f2f6fa;
+              color: #7e868e;
+              font-size: 15px;
+              line-height: 24px;
+              text-align: left;
+              cursor: text;
+  
+              svg {
+                fill: #929aa2;
+              }
+  
+              input {
+                width: 100%;
+              }
+            }
+  
+            button {
+              width: 100%;
+              justify-content: center;
+            }
+          }
+  
+          .checkbox {
+            display: flex;
+            gap: 7px;
+            padding: 1px 0;
+            font-size: 11px;
+            line-height: 14px;
+            color: #7e868e;
+  
+            a {
+              border-bottom: 1px solid #7e868e;
+            }
           }
         }
       }

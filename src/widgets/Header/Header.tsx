@@ -8,9 +8,7 @@ const Header: React.FC = () => {
     <header className={classes.header}>
       <div className="container">
         <div className={classes.content}>
-          <span className={classes.title}>
-            <p>Сладкий сундук</p>
-          </span>
+          <span className={classes.title}>Сладкий сундук</span>
 
           <div className={classes.wrap}>
             <div className={classes.address}>
@@ -25,9 +23,7 @@ const Header: React.FC = () => {
               <Call />
               <div>
                 <span className={classes.phone}>
-                  <p>
-                    <a href="tel:88128449549">8 (812) 844-95-49</a>
-                  </p>
+                  <a href="tel:88128449549">8 (812) 844-95-49</a>
                 </span>
                 <p>Ежедневно с 9:00 до 20:00</p>
               </div>

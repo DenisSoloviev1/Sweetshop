@@ -33,7 +33,7 @@ const Feedback: React.FC<FeedbackProps> = ({
   return (
       <div className={classes.feedback}>
         <div className={classes.info}>
-          <img src={quotes} alt="quotes" />
+          <img src={quotes} alt="quotes" className={classes.quotes} />
 
           <h3 className={classes.title}>{`«${title}»`}</h3>
 

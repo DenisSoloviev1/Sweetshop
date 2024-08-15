@@ -16,3 +16,25 @@
     gap: 43px;
   }
 }
+
+@media screen and (max-width: 426px) {
+  .footer {
+    width: 100%;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    background-color: #081130;
+    font-size: 12px;
+    line-height: 18px;
+    color: #7e868e;
+    gap: 22px;
+  
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+}

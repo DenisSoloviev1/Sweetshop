@@ -3,38 +3,6 @@
 html {
   scroll-behavior: smooth;
 }
-
-body {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  color: #2e363e;
-  background-color: #ffffff;
-  margin: 0;
-  min-width: 320px;
-  width: 100%;
-  min-height: 100vh;
-
-  #root {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    .container {
-      width: 1230px;
-      padding: 0 15px;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-    }
-
-    .containerCenter {
-      justify-content: center;
-    }
-    .containerRight {
-      justify-content: end;
-    }
-  }
-}
 ::-webkit-scrollbar {
   width: 0;
 }
@@ -141,4 +109,53 @@ label {
 
 legend {
   display: block;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: #2e363e;
+  background-color: #ffffff;
+  margin: 0;
+  min-width: 320px;
+  width: 100vw;
+  min-height: 100vh;
+
+  #root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.container {
+  width: 1230px;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.containerCenter {
+  justify-content: center;
+}
+.containerEnd {
+  justify-content: end;
+}
+
+@media screen and (max-width: 340px) {
+  .container {
+    width: 310px;
+    flex-direction: column-reverse;
+    align-items: start;
+  }
+}
+@media screen and (min-width: 341px) and (max-width: 426px) {
+  .container {
+    width: 350px;
+    flex-direction: column-reverse;
+    align-items: start;
+  }
 }

@@ -10,9 +10,8 @@ import { arrayCloud } from "../../assets/data.tsx";
 import { arrayCupcakeCard } from "../../assets/data.tsx";
 import { arrayImgCupcake } from "../../assets/data.tsx";
 import { arrayFeedback } from "../../assets/data.tsx";
-import phone from "../../assets/image/phone.png";
-import woman from "../../assets/image/woman.png";
 import { Call } from "../../assets/svg/svg.tsx";
+import woman from "../../assets/image/woman.png";
 
 const Main: React.FC = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
@@ -44,10 +43,13 @@ const Main: React.FC = () => {
             targetId={"catalog"}
           />
         </div>
+        <img src={arrayCloud[1].image} className={classes.cloud} />
       </section>
 
       <section className={classes.sectionSecond}>
-        <h2>Для любых событий и дорогих вам людей</h2>
+        <div className="container containerCenter">
+          <h2>Для любых событий и дорогих вам людей</h2>
+        </div>
 
         <div className="container containerCenter">
           <div className={classes.gridCupcakeCard} id="catalog">
@@ -130,7 +132,8 @@ const Main: React.FC = () => {
       <section className={classes.sectionThird}>
         <img src={arrayCloud[0].image} className={classes.cloud} />
 
-        <div className="container containerRight">
+        <div className="container containerEnd">
+
           <PromoBanner
             label={"Не нашли то что нужно?"}
             title={"Приготовим заказ \n любой сложности \n по фото или эскизу"}
@@ -142,17 +145,16 @@ const Main: React.FC = () => {
           />
         </div>
 
-        <div className={classes.bottom}>
-          <img src={phone} alt="phone" className={classes.phone} />
-          <img src={arrayCloud[1].image} className={classes.cloud} />
-        </div>
+        <img src={arrayCloud[1].image} className={classes.cloud} />
       </section>
 
       <section className={classes.sectionFourth}>
         <div className="container">
           <PromoBanner
             label={"Не нашли то что нужно?"}
-            title={"Приготовим заказ \n любой сложности \n по фото или эскизу"}
+            title={
+              "Лично приготовлю \n и всё красиво упакую \n для вашего события"
+            }
             child={
               <ul>
                 <li>
@@ -188,7 +190,9 @@ const Main: React.FC = () => {
       <section className={classes.sectionFifth}>
         <img src={arrayCloud[2].image} className={classes.cloud} />
 
-        <h2>Почитайте отзывы довольных клиентов</h2>
+        <div className="container containerCenter">
+          <h2>Почитайте отзывы довольных клиентов</h2>
+        </div>
 
         <div className="container">
           <FeedbackCarousel arrayFeedback={arrayFeedback} />
@@ -198,14 +202,18 @@ const Main: React.FC = () => {
       </section>
 
       <section className={classes.sectionSixth}>
-        <h2>Сделали более 3.000 заказов за 2 года</h2>
+        <div className="container containerCenter">
+          <h2>Сделали более 3.000 заказов за 2 года</h2>
+        </div>
 
-        <h3>
-          Посмотрите фото реальных заказов из нашего &thinsp;
-          <a href="https://www.instagram.com/sweet_chest" target="_blank">
-            instagram
-          </a>
-        </h3>
+        <div className="container containerCenter">
+          <h3>
+            Посмотрите фото реальных заказов из нашего &thinsp;
+            <a href="https://www.instagram.com/sweet_chest" target="_blank">
+              instagram
+            </a>
+          </h3>
+        </div>
 
         <div className={classes.gridImgCupcake}>
           <img
