@@ -5,6 +5,8 @@
   border-radius: 0px 0px 10px 10px;
   border: 1px solid #f2f6fa;
   box-shadow: 2px 8px 16px 0px #c2c6d00f;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 
   img {
     object-fit: cover;
@@ -56,7 +58,11 @@
   }
 }
 
-@media screen and (max-width: 426px) {
+.card:hover{
+  transform: scale(1.01);
+}
+
+@media screen and (max-width: 600px) {
   .card {
     .content {
       padding: 25px 22px;

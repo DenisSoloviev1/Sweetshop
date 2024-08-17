@@ -13,7 +13,7 @@ interface CupcakeCardProps {
 
 const CupcakeCard: React.FC<CupcakeCardProps> = ({ id, image, name, description, price, onClick }) => {
   return (
-    <figure className={classes.card}>
+    <figure className={classes.card} onClick={onClick}>
       <img id={id} src={image} alt="photo" />
 
       <div className={classes.content}>

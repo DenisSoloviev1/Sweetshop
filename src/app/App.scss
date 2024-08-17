@@ -129,7 +129,8 @@ body {
 }
 
 .container {
-  width: 1230px;
+  width: 80%;
+  max-width: 1230px;
   padding: 0 15px;
   display: flex;
   flex-direction: row;
@@ -145,17 +146,11 @@ body {
   justify-content: end;
 }
 
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 769px) {
   .container {
-    width: 310px;
+    width: 95%;
     flex-direction: column-reverse;
     align-items: start;
   }
 }
-@media screen and (min-width: 341px) and (max-width: 426px) {
-  .container {
-    width: 350px;
-    flex-direction: column-reverse;
-    align-items: start;
-  }
-}
+

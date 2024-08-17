@@ -44,6 +44,7 @@ const Main: React.FC = () => {
           />
         </div>
         <img src={arrayCloud[1].image} className={classes.cloud} />
+
       </section>
 
       <section className={classes.sectionSecond}>

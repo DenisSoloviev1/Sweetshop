@@ -2,6 +2,7 @@
   width: 100%;
   height: 615px;
   display: flex;
+  align-items: center;
   padding: 70px 143px;
   gap: 54px;
   border-radius: 5px;
@@ -78,7 +79,7 @@
   }
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 600px) {
   .feedback {
     height: auto;
     flex-direction: column-reverse;
