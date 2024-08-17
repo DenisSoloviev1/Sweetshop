@@ -5,6 +5,7 @@ import PromoBanner from "../../components/PromoBanner/PromoBanner.tsx";
 import FeedbackCarousel from "../FeedbackCarousel/FeedbackCarousel.tsx";
 import CustomButton from "../../components/CustomButton/CustomButton.tsx";
 import ModalWindow from "../../components/ModalWindow/ModalWindow.tsx";
+import ScrollAnimation from "../../components/ScrollAnimation/ScrollAnimation.tsx";
 //import img
 import { arrayCloud } from "../../assets/data.tsx";
 import { arrayCupcakeCard } from "../../assets/data.tsx";
@@ -12,6 +13,8 @@ import { arrayImgCupcake } from "../../assets/data.tsx";
 import { arrayFeedback } from "../../assets/data.tsx";
 import { Call } from "../../assets/svg/svg.tsx";
 import woman from "../../assets/image/woman.png";
+import berry from "../../assets/image/berry.png";
+import leaf from "../../assets/image/leaf.png";
 
 const Main: React.FC = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
@@ -29,6 +32,46 @@ const Main: React.FC = () => {
   return (
     <main className={classes.main}>
       <section className={classes.sectionFirst}>
+        <ScrollAnimation
+          style={{
+            position: "absolute",
+            top: "200px",
+            left: "20px",
+          }}
+        >
+          {<img src={berry} id={classes.obj1} />}
+        </ScrollAnimation>
+
+        <ScrollAnimation
+          style={{
+            position: "absolute",
+            top: "110px",
+            right: "5%",
+          }}
+        >
+          {<img src={berry} id={classes.obj2} />}
+        </ScrollAnimation>
+
+        <ScrollAnimation
+          style={{
+            position: "absolute",
+            bottom: "20%",
+            left: "50px",
+          }}
+        >
+          {<img src={leaf} id={classes.obj3} />}
+        </ScrollAnimation>
+
+        <ScrollAnimation
+          style={{
+            position: "absolute",
+            bottom: "25%",
+            right: "10%",
+          }}
+        >
+          {<img src={berry} id={classes.obj4} />}
+        </ScrollAnimation>
+
         <div className="container">
           <PromoBanner
             label={"вкуснейшие"}
@@ -44,7 +87,6 @@ const Main: React.FC = () => {
           />
         </div>
         <img src={arrayCloud[1].image} className={classes.cloud} />
-
       </section>
 
       <section className={classes.sectionSecond}>
@@ -134,7 +176,6 @@ const Main: React.FC = () => {
         <img src={arrayCloud[0].image} className={classes.cloud} />
 
         <div className="container containerEnd">
-
           <PromoBanner
             label={"Не нашли то что нужно?"}
             title={"Приготовим заказ \n любой сложности \n по фото или эскизу"}
@@ -278,7 +319,11 @@ const Main: React.FC = () => {
                     type="tel"
                     placeholder="Номер телефона"
                     maxLength={11}
+                    minLength={11}
+                    pattern="[\+]*[7-8]{1}\s?[\(]*9[0-9]{2}[\)]*\s?\d{3}[-]*\d{2}[-]*\d{2}"
                     id="input"
+                    required
+                    autoComplete="off"
                   />
                 </div>
 

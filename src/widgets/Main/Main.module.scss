@@ -15,6 +15,7 @@
   }
 
   .sectionFirst {
+    position: relative;
     padding-top: 200px;
     width: 100%;
     height: 1295px;
@@ -27,7 +28,22 @@
     background-repeat: no-repeat;
     justify-content: space-between;
 
-    
+    #obj1 {
+      width: 120px;
+      transform: rotate(-45deg);
+    }
+    #obj2 {
+      width: 100px;
+      transform: rotate(30deg);
+    }
+    #obj3 {
+      width: 200px;
+      transform: rotate(-155deg);
+    }
+    #obj4 {
+      width: 120px;
+      transform: rotate(-150deg);
+    }
   }
 
   .sectionSecond {
@@ -250,7 +266,6 @@
       height: auto;
       background-image: none;
       background-color: #081130;
-
     }
 
     .sectionSecond {
