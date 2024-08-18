@@ -1,5 +1,6 @@
 .main {
   width: 100%;
+  overflow-x: hidden;
 
   .cloud {
     width: 100%;
@@ -47,6 +48,7 @@
   }
 
   .sectionSecond {
+    position: relative;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -60,9 +62,23 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
     }
+
+    #obj5 {
+      width: 100px;
+      transform: rotate(-63deg);
+    }
+    #obj6 {
+      width: 160px;
+      transform: rotate(-180deg);
+    }
+    #obj7 {
+      width: 110px;
+      transform: rotate(90deg);
+    }
   }
 
   .sectionThird {
+    position: relative;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -71,13 +87,31 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    #obj8 {
+      width: 110px;
+      transform: rotate(90deg);
+    }
+    #obj9 {
+      width: 100px;
+      transform: rotate(-140deg);
+    }
   }
 
   .sectionFourth {
+    position: relative;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    #obj10 {
+      width: 200px;
+      transform: rotate(-59deg);
+    }
+    #obj11 {
+      width: 300px;
+    }
 
     .woman {
       position: relative;
@@ -124,11 +158,21 @@
   }
 
   .sectionFifth {
+    position: relative;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #081130;
+
+    #obj12 {
+      width: 120px;
+      transform: rotate(-120deg);
+    }
+    #obj13 {
+      width: 120px;
+      transform: rotate(-135deg);
+    }
 
     h2 {
       margin-bottom: 50px;
@@ -159,12 +203,30 @@
   }
 
   .sectionSeventh {
+    position: relative;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #081130;
     color: #2e363e;
+
+    #obj14 {
+      width: 120px;
+      transform: rotate(-95deg);
+    }
+    #obj15 {
+      width: 120px;
+      transform: rotate(30deg);
+    }
+    #obj16 {
+      width: 120px;
+      transform: rotate(-127deg);
+    }
+    #obj17 {
+      width: 120px;
+      transform: rotate(75deg);
+    }
 
     .form {
       width: 100%;

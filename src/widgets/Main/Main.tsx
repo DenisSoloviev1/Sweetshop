@@ -15,6 +15,7 @@ import { Call } from "../../assets/svg/svg.tsx";
 import woman from "../../assets/image/woman.png";
 import berry from "../../assets/image/berry.png";
 import leaf from "../../assets/image/leaf.png";
+import leafGroup from "../../assets/image/leafGroup.png";
 
 const Main: React.FC = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
@@ -35,9 +36,10 @@ const Main: React.FC = () => {
         <ScrollAnimation
           style={{
             position: "absolute",
-            top: "200px",
-            left: "20px",
+            top: "150px",
+            left: "0",
           }}
+          fromDirection="upperLeft"
         >
           {<img src={berry} id={classes.obj1} />}
         </ScrollAnimation>
@@ -45,9 +47,10 @@ const Main: React.FC = () => {
         <ScrollAnimation
           style={{
             position: "absolute",
-            top: "110px",
-            right: "5%",
+            top: "150px",
+            right: "20px",
           }}
+          fromDirection="upperRight"
         >
           {<img src={berry} id={classes.obj2} />}
         </ScrollAnimation>
@@ -58,6 +61,7 @@ const Main: React.FC = () => {
             bottom: "20%",
             left: "50px",
           }}
+          fromDirection="lowerLeft"
         >
           {<img src={leaf} id={classes.obj3} />}
         </ScrollAnimation>
@@ -68,6 +72,7 @@ const Main: React.FC = () => {
             bottom: "25%",
             right: "10%",
           }}
+          fromDirection="lowerRight"
         >
           {<img src={berry} id={classes.obj4} />}
         </ScrollAnimation>
@@ -90,6 +95,42 @@ const Main: React.FC = () => {
       </section>
 
       <section className={classes.sectionSecond}>
+        <ScrollAnimation
+          style={{
+            position: "absolute",
+            top: "15%",
+            left: "7%",
+            zIndex: "3",
+          }}
+          fromDirection="upperLeft"
+        >
+          {<img src={berry} id={classes.obj5} />}
+        </ScrollAnimation>
+
+        <ScrollAnimation
+          style={{
+            position: "absolute",
+            top: "50%",
+            right: "30px",
+            zIndex: "3",
+          }}
+          fromDirection="lowerLeft"
+        >
+          {<img src={leaf} id={classes.obj6} />}
+        </ScrollAnimation>
+
+        <ScrollAnimation
+          style={{
+            position: "absolute",
+            bottom: "20%",
+            left: "70px",
+            zIndex: "3",
+          }}
+          fromDirection="upperLeft"
+        >
+          {<img src={leaf} id={classes.obj7} />}
+        </ScrollAnimation>
+
         <div className="container containerCenter">
           <h2>Для любых событий и дорогих вам людей</h2>
         </div>
@@ -173,6 +214,30 @@ const Main: React.FC = () => {
       </section>
 
       <section className={classes.sectionThird}>
+        <ScrollAnimation
+          style={{
+            position: "absolute",
+            top: "25%",
+            left: "15%",
+            zIndex: "3",
+          }}
+          fromDirection="upperLeft"
+        >
+          {<img src={leaf} id={classes.obj8} />}
+        </ScrollAnimation>
+
+        <ScrollAnimation
+          style={{
+            position: "absolute",
+            top: "20%",
+            right: "7%",
+            zIndex: "3",
+          }}
+          fromDirection="upperRight"
+        >
+          {<img src={berry} id={classes.obj9} />}
+        </ScrollAnimation>
+
         <img src={arrayCloud[0].image} className={classes.cloud} />
 
         <div className="container containerEnd">
@@ -191,6 +256,28 @@ const Main: React.FC = () => {
       </section>
 
       <section className={classes.sectionFourth}>
+        <ScrollAnimation
+          style={{
+            position: "absolute",
+            top: "15%",
+            right: "35%",
+          }}
+          fromDirection="lowerRight"
+        >
+          {<img src={berry} id={classes.obj10} />}
+        </ScrollAnimation>
+
+        <ScrollAnimation
+          style={{
+            position: "absolute",
+            top: "15%",
+            right: "10%",
+          }}
+          fromDirection="lowerLeft"
+        >
+          {<img src={leafGroup} id={classes.obj11} />}
+        </ScrollAnimation>
+
         <div className="container">
           <PromoBanner
             label={"Не нашли то что нужно?"}
@@ -230,6 +317,29 @@ const Main: React.FC = () => {
       </section>
 
       <section className={classes.sectionFifth}>
+        <ScrollAnimation
+          style={{
+            position: "absolute",
+            top: "20%",
+            left: "3%",
+          }}
+          fromDirection="upperLeft"
+        >
+          {<img src={leaf} id={classes.obj12} />}
+        </ScrollAnimation>
+
+        <ScrollAnimation
+          style={{
+            position: "absolute",
+            top: "28%",
+            right: "7%",
+            zIndex: "3",
+          }}
+          fromDirection="lowerRight"
+        >
+          {<img src={berry} id={classes.obj13} />}
+        </ScrollAnimation>
+
         <img src={arrayCloud[2].image} className={classes.cloud} />
 
         <div className="container containerCenter">
@@ -298,6 +408,54 @@ const Main: React.FC = () => {
       </section>
 
       <section className={classes.sectionSeventh}>
+      <ScrollAnimation
+          style={{
+            position: "absolute",
+            top: "23%",
+            left: "5%",
+            zIndex: "3",
+          }}
+          fromDirection="upperLeft"
+        >
+          {<img src={leaf} id={classes.obj14} />}
+        </ScrollAnimation>
+
+        <ScrollAnimation
+          style={{
+            position: "absolute",
+            top: "28%",
+            right: "7%",
+            zIndex: "3",
+          }}
+          fromDirection="upperRight"
+        >
+          {<img src={berry} id={classes.obj15} />}
+        </ScrollAnimation>
+
+        <ScrollAnimation
+          style={{
+            position: "absolute",
+            bottom: "5%",
+            left: "7%",
+            zIndex: "3",
+          }}
+          fromDirection="lowerLeft"
+        >
+          {<img src={berry} id={classes.obj16} />}
+        </ScrollAnimation>
+
+        <ScrollAnimation
+          style={{
+            position: "absolute",
+            bottom: "3%",
+            right: "7%",
+            zIndex: "3",
+          }}
+          fromDirection="lowerRight"
+        >
+          {<img src={leaf} id={classes.obj17} />}
+        </ScrollAnimation>
+
         <img src={arrayCloud[4].image} className={classes.cloud} />
 
         <div className="container containerCenter">

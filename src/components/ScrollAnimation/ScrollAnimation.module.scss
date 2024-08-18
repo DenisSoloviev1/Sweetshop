@@ -5,10 +5,8 @@
 
 .visible {
   opacity: 1;
-  transform: translateX(0) translateY(0); /* Оба значения должны возвращаться к исходному положению */
 }
 
 .hidden {
   opacity: 0;
-  transform: translateX(50px) translateY(-20px) ; /* Оба значения изменяются одновременно */
 }
