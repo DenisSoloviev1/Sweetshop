@@ -334,6 +334,11 @@
       padding: 50px auto;
       gap: 25px;
 
+      #obj5,
+      #obj6,
+      #obj7 {
+        display: none;
+      }
       .gridCupcakeCard {
         grid-template-columns: repeat(1, 1fr);
         gap: 10px;
@@ -347,6 +352,11 @@
 
     .sectionFourth {
       padding: 50px 0;
+
+      #obj10,
+      #obj11 {
+        display: none;
+      }
 
       .woman {
         flex-direction: column;
@@ -373,6 +383,13 @@
       }
     }
 
+    .sectionFifth {
+      #obj12,
+      #obj13 {
+        display: none;
+      }
+    }
+
     .sectionSixth {
       padding: 25px 0;
 
@@ -394,6 +411,13 @@
       align-items: center;
       background-color: #081130;
       color: #2e363e;
+
+      #obj14,
+      #obj15,
+      #obj16,
+      #obj17 {
+        display: none;
+      }
 
       .form {
         width: 100%;
